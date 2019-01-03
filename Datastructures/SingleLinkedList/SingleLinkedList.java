@@ -50,8 +50,7 @@ public class SingleLinkedList {
 	}
 	
 	public static void AddTail(Object item) {
-		SingleNode CurrentNode = getHead();
-		
+		SingleNode CurrentNode = getHead();		
 		if(CurrentNode == null) {
 			AddHead(item);
 			return;
@@ -61,8 +60,39 @@ public class SingleLinkedList {
 		SingleNode LastNode = new SingleNode(item);
 		CurrentNode.setNext(LastNode);
 		
-		setListSize(size()+1);
+		setListSize(size()+1);	
+	}
 	
+	public static void AddAt(Object item, int index) {
+		int CurrentSize = size() - 1;
+		SingleNode CurrentNode = getHead();
+		
+		if(index == 0) {
+			AddHead(item);
+			return;
+		}
+		else if(CurrentSize < index) {
+			System.out.println("This index is out of range");
+			return;
+		}
+		
+		for(int i = 0; i < index - 1; i++) CurrentNode = CurrentNode.getNext();
+		
+		SingleNode NewNode = new SingleNode(item);
+		NewNode.setNext(CurrentNode.getNext());
+		CurrentNode.setNext(NewNode);
+		
+		setListSize(size()+1);
+	}
+	
+	//Deletions
+	public static void DeleteHead() {
+		SingleNode CurrentHead = getHead();
+		if(CurrentHead == null) return;
+		
+		SingleNode NewHead = CurrentHead.getNext();		
+		setHead(NewHead);
+		setListSize(size()-1);
 	}
 	
 	// Printing list's content
