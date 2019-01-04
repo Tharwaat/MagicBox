@@ -1,11 +1,7 @@
-package linkedLists;
-
-import javax.swing.LayoutStyle;
-
 public class SingleLinkedList {
 	
-	private static SingleNode Head;
-	private static int ListSize;
+	private  SingleNode Head;
+	private  int ListSize;
 	
 	// Constructors
 	SingleLinkedList() {
@@ -19,27 +15,27 @@ public class SingleLinkedList {
 	}
 	
 	// Setters and getters
-	public static SingleNode getHead() {
+	public  SingleNode getHead() {
 		return Head;
 	}
 
 
-	public static void setHead(SingleNode head) {
+	public  void setHead(SingleNode head) {
 		Head = head;
 	}
 
 
-	public static int size() {
+	public  int size() {
 		return ListSize;
 	}
 
 
-	public static void setListSize(int listSize) {
+	public  void setListSize(int listSize) {
 		ListSize = listSize;
 	}
 	
 	// Additions
-	public static void AddHead(Object item) {
+	public  void AddHead(Object item) {
 		SingleNode BeforeHead = getHead();
 		
 		SingleNode NewHead = new SingleNode(item);
@@ -49,7 +45,7 @@ public class SingleLinkedList {
 		setListSize(size()+1);
 	}
 	
-	public static void AddTail(Object item) {
+	public  void AddTail(Object item) {
 		SingleNode CurrentNode = getHead();		
 		if(CurrentNode == null) {
 			AddHead(item);
@@ -63,7 +59,7 @@ public class SingleLinkedList {
 		setListSize(size()+1);	
 	}
 	
-	public static void AddAt(Object item, int index) {
+	public  void AddAt(Object item, int index) {
 		int CurrentSize = size() - 1;
 		SingleNode CurrentNode = getHead();
 		
@@ -86,7 +82,7 @@ public class SingleLinkedList {
 	}
 	
 	//Deletions
-	public static void DeleteHead() {
+	public  void DeleteHead() {
 		SingleNode CurrentHead = getHead();
 		if(CurrentHead == null) return;
 		
