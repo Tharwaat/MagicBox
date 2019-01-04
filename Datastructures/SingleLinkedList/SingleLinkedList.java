@@ -1,3 +1,5 @@
+package linkedLists;
+
 public class SingleLinkedList {
 	
 	private  SingleNode Head;
@@ -5,33 +7,33 @@ public class SingleLinkedList {
 	
 	// Constructors
 	SingleLinkedList() {
-		Head = null;
-		ListSize = 0;
+		this.Head = null;
+		this.ListSize = 0;
 	}
 	
 	SingleLinkedList(int size) {
-		Head = null;
-		ListSize = size;
+		this.Head = null;
+		this.ListSize = size;
 	}
 	
 	// Setters and getters
 	public  SingleNode getHead() {
-		return Head;
+		return this.Head;
 	}
 
 
 	public  void setHead(SingleNode head) {
-		Head = head;
+		this.Head = head;
 	}
 
 
 	public  int size() {
-		return ListSize;
+		return this.ListSize;
 	}
 
 
 	public  void setListSize(int listSize) {
-		ListSize = listSize;
+		this.ListSize = listSize;
 	}
 	
 	// Additions
