@@ -5,7 +5,7 @@ public class Search{
 		
         int ArrayLength = Array.length;
         int LowPivot = 0; 
-        int HighPivot = ArrayLength; 
+        int HighPivot = ArrayLength - 1; 
         int MidPivot; 
 		
 		while(LowPivot <= HighPivot) {
