@@ -1,3 +1,5 @@
+package linkedLists;
+
 public class SingleNode {
 	private SingleNode next;
 	private Object data;
