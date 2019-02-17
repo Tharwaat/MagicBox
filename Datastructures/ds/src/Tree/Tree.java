@@ -2,5 +2,13 @@ package Tree;
 
 public interface Tree<E> {
 	
-	public void add(E data);
+	
+	// Insertions
+	public void insert(E data);
+	
+	// Views
+	public void Display();
+	
+	// Deletions
+	public void delete(E data);
 }
